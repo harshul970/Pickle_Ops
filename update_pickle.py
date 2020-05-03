@@ -7,15 +7,14 @@ dict_data = {
     ('RT4', 'sec_1'): [['sid', 'data1', 'data2', 'data3'], ['abcp', '501', '660', '431']],
 }
 
-## Updating data into Pickle
-read_pickle = open('data.pickle', 'rb')
-dict_data_read = pickle.load(read_pickle)
+# Updating data into Pickle
+read_pickle = open('data.pickle', 'rb')                 # Reading data from pickle file
+dict_data_read = pickle.load(read_pickle)               # Deserialized and stored into Dictionary
 read_pickle.close()
 
-## Updating Dictionary
-dict_data_read.update(dict_data)
+dict_data_read.update(dict_data)                        # Updating data into Dictionary
 
 ## Writing into Pickle
-write_pickle_file = open('data.pickle', 'wb')
-pickle.dump(dict_data_read, write_pickle_file)
+write_pickle_file = open('data.pickle', 'wb')           # Opening pickle file in binary write mode
+pickle.dump(dict_data_read, write_pickle_file)          # Storing updated dictionary into pickle file
 write_pickle_file.close()
