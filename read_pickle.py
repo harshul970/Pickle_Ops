@@ -10,6 +10,6 @@ dict_data = {
 print(dict_data)
 
 # Storing Data into Pickle
-pickle_file = open('data.pickle', 'wb')
-pickle.dump(dict_data, pickle_file)
+pickle_file = open('data.pickle', 'wb')     #Creating a pickle binary file, 'wb' is for wrinting in binary mode
+pickle.dump(dict_data, pickle_file)         #Dictionary is serialized and dumped to pickle file
 pickle_file.close()
